@@ -2,24 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6ab20bb-801a-4296-affd-ba39bade3a0a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/UserAdmin.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/sass_stdlib.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/app/client/api.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/app/client/bootstrapper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/app/client/config.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/app/client/dataservice.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/app/client/mock/mock.dataservice.user.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/app/client/mock/mock.generator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/app/client/views/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/lib/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/styles/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/app/client/models/users.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/app/client/views/users.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/dataservice.js" afterPath="$PROJECT_DIR$/scripts/app/client/dataservice.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/mock/mock.generator.js" afterPath="$PROJECT_DIR$/scripts/app/client/mock/mock.generator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/views/main.js" afterPath="$PROJECT_DIR$/scripts/app/client/views/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/lib/knockout.js" afterPath="$PROJECT_DIR$/scripts/lib/knockout.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/main.js" afterPath="$PROJECT_DIR$/scripts/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.html" afterPath="$PROJECT_DIR$/views/index.html" />
     </list>
     <ignored path="UserAdmin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,21 +39,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/app/client/views/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="2" selection-start="529" selection-end="529" vertical-scroll-proportion="0.2735632">
-              <folding>
-                <element signature="e#0#157#0" expanded="false" />
-              </folding>
+            <state line="15" column="58" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dataservice.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="users.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/app/client/models/users.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="0" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="59" selection-start="3150" selection-end="3150" vertical-scroll-proportion="-28.192308">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dataservice.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/app/client/dataservice.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="22" selection-start="1423" selection-end="1423" vertical-scroll-proportion="0.0">
+            <state line="48" column="59" selection-start="1997" selection-end="1997" vertical-scroll-proportion="0.7264368">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mock.dataservice.user.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/app/client/mock/mock.dataservice.user.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="7" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -72,27 +88,6 @@
         <entry file="file://$PROJECT_DIR$/scripts/lib/jquery.mockjson.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="184" column="8" selection-start="7780" selection-end="7789" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mock.generator.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/app/client/mock/mock.generator.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="19" selection-start="6520" selection-end="6808" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#99#6449#0" expanded="false" />
-                <element signature="e#7029#7121#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="api.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/app/client/api.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="121" selection-end="498" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -111,22 +106,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/scripts/app/dataservice.js" />
-        <option value="$PROJECT_DIR$/scripts/app/client/main.js" />
-        <option value="$PROJECT_DIR$/scripts/bootstrapper.js" />
-        <option value="$PROJECT_DIR$/scripts/app/main.js" />
-        <option value="$PROJECT_DIR$/views/index.html" />
         <option value="$PROJECT_DIR$/scripts/lib/amplify.js" />
         <option value="$PROJECT_DIR$/scripts/app/client/mock/mock.js" />
         <option value="$PROJECT_DIR$/scripts/app/client/api.js" />
         <option value="$PROJECT_DIR$/scripts/app/client/mock/mock.dataservice.user.js" />
         <option value="$PROJECT_DIR$/scripts/app/client/config.js" />
-        <option value="$PROJECT_DIR$/scripts/app/client/mock/mock.generator.js" />
-        <option value="$PROJECT_DIR$/scripts/main.js" />
         <option value="$PROJECT_DIR$/scripts/app/client/bootstrapper.js" />
         <option value="$PROJECT_DIR$/scripts/lib/jquery.mockjson.js" />
-        <option value="$PROJECT_DIR$/scripts/app/client/dataservice.js" />
+        <option value="$PROJECT_DIR$/scripts/lib/jquery.js" />
+        <option value="$PROJECT_DIR$/scripts/lib/knockout.js" />
+        <option value="$PROJECT_DIR$/scripts/app/client/mock/mock.generator.js" />
+        <option value="$PROJECT_DIR$/scripts/main.js" />
+        <option value="$PROJECT_DIR$/scripts/app/client/views/users.js" />
+        <option value="$PROJECT_DIR$/views/index.html" />
+        <option value="$PROJECT_DIR$/scripts/app/client/models/users.js" />
         <option value="$PROJECT_DIR$/scripts/app/client/views/main.js" />
+        <option value="$PROJECT_DIR$/scripts/app/client/dataservice.js" />
       </list>
     </option>
   </component>
@@ -205,6 +200,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="styles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserAdmin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserAdmin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="styles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -310,7 +323,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mock" />
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -423,27 +436,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/styles/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="40" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/lib/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="28407" selection-start="92629" selection-end="92629" vertical-scroll-proportion="0.03967328">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="38" selection-start="168" selection-end="168" vertical-scroll-proportion="0.1007109">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/app/client/mock/mock.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="3" selection-start="572" selection-end="572" vertical-scroll-proportion="0.41034484">
@@ -458,28 +450,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/client/mock/mock.dataservice.user.js">
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="7" selection-start="339" selection-end="339" vertical-scroll-proportion="0.29310346">
+        <state line="5" column="0" selection-start="121" selection-end="498" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/lib/amplify.js">
+    <entry file="file://$PROJECT_DIR$/scripts/lib/knockout.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="788" column="0" selection-start="19835" selection-end="19885" vertical-scroll-proportion="0.8827586">
+        <state line="85" column="0" selection-start="40939" selection-end="40939" vertical-scroll-proportion="0.88098013">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/client/mock/mock.generator.js">
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/bootstrapper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="19" selection-start="6520" selection-end="6808" vertical-scroll-proportion="0.0">
+        <state line="12" column="7" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/lib/amplify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="788" column="0" selection-start="19835" selection-end="19885" vertical-scroll-proportion="1.2344828">
           <folding>
-            <element signature="e#99#6449#0" expanded="false" />
-            <element signature="e#7029#7121#0" expanded="false" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -491,40 +489,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/client/api.js">
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/mock/mock.generator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="121" selection-end="498" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="38" column="36" selection-start="6632" selection-end="6632" vertical-scroll-proportion="0.1367816">
+          <folding>
+            <element signature="e#99#6449#0" expanded="false" />
+            <element signature="e#7032#7124#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/client/dataservice.js">
+    <entry file="file://$PROJECT_DIR$/scripts/lib/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="22" selection-start="1423" selection-end="1423" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="2" column="672" selection-start="788" selection-end="788" vertical-scroll-proportion="0.03967328">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="30" selection-start="254" selection-end="254" vertical-scroll-proportion="0.1954023">
+        <state line="15" column="0" selection-start="385" selection-end="385" vertical-scroll-proportion="0.29310346">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/client/bootstrapper.js">
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/mock/mock.dataservice.user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="7" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
+        <state line="15" column="7" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/views/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="2" selection-start="520" selection-end="520" vertical-scroll-proportion="0.2735632">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="59" selection-start="3150" selection-end="3150" vertical-scroll-proportion="-28.192308">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/app/client/views/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="2" selection-start="529" selection-end="529" vertical-scroll-proportion="0.2735632">
-          <folding>
-            <element signature="e#0#157#0" expanded="false" />
-          </folding>
+        <state line="15" column="58" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/models/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/dataservice.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="59" selection-start="1997" selection-end="1997" vertical-scroll-proportion="0.7264368">
+          <folding />
         </state>
       </provider>
     </entry>

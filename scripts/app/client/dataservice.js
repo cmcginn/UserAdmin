@@ -1,5 +1,5 @@
-define('client/dataservice', ['jquery', 'amplify', 'jquery.mockjson'],
-    function ($, amplify, mock) {
+define('client/dataservice', ['jquery','lodash', 'amplify', 'jquery.mockjson'],
+    function ($,_, amplify, mock) {
         var
             init = function () {
                 amplify.request.define("get", "ajax", {
@@ -24,22 +24,39 @@ define('client/dataservice', ['jquery', 'amplify', 'jquery.mockjson'],
             },
             get = {
                 users:function () {
-                    var data = $.mockJSON.generateFromTemplate({
-                        'users|8-20':[
+                           if(amplify.store("users")==undefined)
                             {
-                                'id':1,
-                                'username':'@LAST_NAME',
-                                'password':'@LOREM'
-                            }
-                        ]
-                    });
-                  amplify.publish(events.getUsersComplete,result(data));
+                                var data = $.mockJSON.generateFromTemplate({
+                                    'users|8-20':[
+                                        {
+                                            'id|+1':1,
+                                            'username':'@LAST_NAME',
+                                            'password':'@LOREM'
+                                        }
+                                    ]
+                                });
+                                amplify.store("users",data);
+                             }
+                  amplify.publish(events.getUsersComplete,result(amplify.store("users")));
+                }
+            },
+            post={
+                user:function(options){
+
+                    var data = amplify.store("users");
+                    console.log(data);
+                    var item = _.where(data.users,{id:options.id})[0];
+                    var index = _.indexOf(data.users,item);
+                    data.users[index].username=options.username;
+                    amplify.store("users",data);
                 }
             }
+
         return{
             init:init,
             events:events,
             subscribe:subscribe,
-            get:get
+            get:get,
+            post:post
         }
     });

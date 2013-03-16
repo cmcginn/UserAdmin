@@ -36,7 +36,7 @@ define('mock/mock.generator',
             generateUsers = function () {
                 var data = $.mockJSON.generateFromTemplate({
                     'attendance|8-16': [{
-                        'personId': 1,
+                        'personId|+1': 1,
                         'sessionId|+1': 1,
                         rating: '@RATING',
                         text: '@LOREM_IPSUM'
