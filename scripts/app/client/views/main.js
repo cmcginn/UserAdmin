@@ -13,6 +13,7 @@ define('views/main', ['jquery', 'knockout', 'knockout.mapping', 'lodash', 'clien
                 }
             }
             ds.subscribe(ds.events.getAccountsComplete, accounts.accountsViewModel.onGetAccountsComplete);
+            ds.subscribe(ds.events.postAccountComplete, accounts.accountsViewModel.onPostAccountComplete);
             ds.subscribe(ds.events.getRolePermissionsComplete, rolePermissions.rolePermissionsViewModel.onGetRolePermissionsComplete);
             ds.get.accounts();
             ds.get.rolePermissions();
