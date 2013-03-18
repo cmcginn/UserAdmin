@@ -1,15 +1,26 @@
 define('models/accounts', ['knockout'], function (ko) {
     var Account = function (options) {
+        options=options||{
+            userId:null,
+            username:null,
+            password:null,
+            passwordConfirmation:null
+        };
         this.userId = ko.observable(options.userId);
         this.username = ko.observable(options.username);
         this.password = ko.observable(options.password);
         this.passwordConfirmation = ko.observable(options.password);
-
+        if(!options.roles)
+            options.roles=[];
         this.roles = ko.observableArray();
         this.errors = ko.observable([]);
         this.validate = function () {
             var errs = []
-            if (this.password() != this.passwordConfirmation())
+            if(this.username()==null)
+                errs.push({error:'Username is required'});
+            if(this.password()==null)
+                errs.push({error:'Password is required'});
+            else if (this.password() != this.passwordConfirmation())
                 errs.push({error:'Passwords do not match'});
             this.errors(errs);
         }
@@ -22,6 +33,7 @@ define('models/accounts', ['knockout'], function (ko) {
         this.addRole = function (options) {
             this.roles.push(options);
         }
+
         for (var i = 0; i < options.roles.length; i++) {
             var item = options.roles[i];
             var args = {
@@ -38,10 +50,12 @@ define('models/accounts', ['knockout'], function (ko) {
         this.addAccount = function (options) {
             this.accounts.push(new Account(options));
         }
+
         for (var i = 0; i < options.accounts.length; i++)
             this.addAccount(options.accounts[i]);
     }
     return{
-        AccountList:AccountList
+        AccountList:AccountList,
+        Account:Account
     }
 })

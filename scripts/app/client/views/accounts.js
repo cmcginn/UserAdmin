@@ -12,6 +12,13 @@ define('views/accounts',['knockout','models/accounts'],function(ko,accounts){
         onGetAccountsComplete:function (result) {
             self.accountlist = new accounts.AccountList(result.data);
             ko.applyBindingsToNode(document.getElementById('accountlist'), { template:{ name:'accountlist-template', data:self.accountlist} });
+        },
+        newAccount:function(){
+            var item = new accounts.Account();
+            ko.applyBindingsToNode(document.getElementById('newaccount'), { template:{ name:'newaccount-template', data:item } });
+        },
+        cancelNewAccount:function(){
+            console.log('canceled');
         }
     }
     return{

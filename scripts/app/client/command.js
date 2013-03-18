@@ -1,5 +1,5 @@
 !function ($) {
-
+  var _dom =this;
   "use strict"; // jshint ;_;
 
    /* COMMAND PUBLIC CLASS DEFINITION
@@ -21,7 +21,7 @@
       //needs constructor def
       constructor:Command,
       execute:function(options){
-          window[options.target]['commands'][options.action] && window[options.target]['commands'][options.action].apply(Command,[].slice.call(arguments));
+          window[options.target][options.action] && window[options.target][options.action].apply(Command,[].slice.call(arguments));
       }
   }
 

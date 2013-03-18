@@ -6,6 +6,9 @@ define('views/users', ['jquery','knockout', 'lodash','models/users', 'client/com
             self.userlist = new usermodel.Userlist(result.data);
             ko.applyBindingsToNode(document.getElementById('userlist'), { template:{ name:'userlist-template', data:self.userlist} });
 
+        },
+        addUser:function(){
+
         }
     }
     return{
