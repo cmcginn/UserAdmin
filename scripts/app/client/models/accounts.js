@@ -16,15 +16,16 @@ define('models/accounts', ['knockout'], function (ko) {
         this.errors = ko.observable([]);
         this.validate = function () {
             var errs = []
-            if(this.username()==null)
+            if(!this.username())
                 errs.push({error:'Username is required'});
-            if(this.password()==null)
+            if(!this.password())
                 errs.push({error:'Password is required'});
             else if (this.password() != this.passwordConfirmation())
                 errs.push({error:'Passwords do not match'});
             this.errors(errs);
         }
         this.saveAccount = function () {
+
             this.validate();
             if (this.errors().length == 0)
                 $(document).trigger({type:'saveAccount', args:{data:this}});

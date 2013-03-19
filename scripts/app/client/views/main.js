@@ -1,4 +1,4 @@
-define('views/main', ['jquery', 'knockout', 'knockout.mapping', 'lodash', 'client/dataservice', 'client/command', 'views/accounts', 'views/rolePermissions'], function ($, ko, mapping, _, ds, command, accounts, rolePermissions) {
+define('views/main', ['jquery', 'ko','knockout.mapping', 'lodash', 'client/dataservice', 'client/command','client/bindinghandlers', 'views/accounts', 'views/rolePermissions'], function ($, ko,mapping, _, ds, command,handlers, accounts, rolePermissions) {
 
     var
         self = this,
@@ -18,7 +18,7 @@ define('views/main', ['jquery', 'knockout', 'knockout.mapping', 'lodash', 'clien
             ds.get.accounts();
             ds.get.rolePermissions();
             $(document).on('saveAccount', function (event) {
-                if(event.args.data.id==null)
+                if(!event.args.data.userId())
                     ds.post.account(mapping.toJS(event.args.data));
                 else
                     ds.put.account(mapping.toJS(event.args.data));
