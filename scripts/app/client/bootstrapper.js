@@ -1,5 +1,5 @@
 define('client/bootstrapper',
-    ['jquery','client/dataservice','views/main'],
+    ['jquery','client/dataservice','viewmodels/main'],
     function ($, ds,main) {
         var
             run = function () {

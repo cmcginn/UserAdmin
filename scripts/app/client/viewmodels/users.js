@@ -1,4 +1,4 @@
-define('views/users', ['jquery','knockout', 'lodash','models/users', 'client/command'], function ($,ko, _,usermodel, command) {
+define('viewmodels/users', ['jquery','knockout', 'lodash','models/users', 'client/command'], function ($,ko, _,usermodel, command) {
     var usersViewModel = {
         self:this,
         userlist:null,

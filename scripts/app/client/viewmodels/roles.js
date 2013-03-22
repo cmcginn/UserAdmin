@@ -1,4 +1,4 @@
-define('views/roles', ['jquery','knockout', 'lodash','models/roles', 'client/command'], function ($,ko, _,rolesmodel, command) {
+define('viewmodels/roles', ['jquery','knockout', 'lodash','models/roles', 'client/command'], function ($,ko, _,rolesmodel, command) {
     var rolesViewModel = {
         self:this,
         rolelist:null,

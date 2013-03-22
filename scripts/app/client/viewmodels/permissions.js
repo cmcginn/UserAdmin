@@ -1,4 +1,4 @@
-define('views/permissions',['knockout','models/permissions'],function(ko,permissions){
+define('viewmodels/permissions',['knockout','models/permissions'],function(ko,permissions){
     var permissionsViewModel = {
         self:this,
         permissionlist:null,

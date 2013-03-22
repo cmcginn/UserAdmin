@@ -4,16 +4,23 @@ define('models/accounts', ['knockout'], function (ko) {
             userId:null,
             username:null,
             password:null,
-            passwordConfirmation:null
+            passwordConfirmation:null,
+            availableRoles:[]
         };
         this.userId = ko.observable(options.userId);
         this.username = ko.observable(options.username);
         this.password = ko.observable(options.password);
         this.passwordConfirmation = ko.observable(options.password);
+
         if(!options.roles)
             options.roles=[];
         this.roles = ko.observableArray();
+        if(!options.availableRoles)
+            options.availableRoles = ko.observableArray();
+
         this.errors = ko.observable([]);
+        this.availableRoles = ko.observableArray();
+
         this.validate = function () {
             var errs = []
             if(!this.username())
@@ -34,15 +41,26 @@ define('models/accounts', ['knockout'], function (ko) {
         this.addRole = function (options) {
             this.roles.push(options);
         }
-
+        this.addAvailableRole=function(options){
+            this.availableRoles.push(options);
+        }
         for (var i = 0; i < options.roles.length; i++) {
             var item = options.roles[i];
             var args = {
                 id:ko.observable(item.id),
-                name:ko.observable(item.name),
-                selected:ko.observable(item.selected)
+                name:ko.observable(item.name)
+
             };
             this.addRole(args);
+        }
+        for(var i=0;i<options.availableRoles.length;i++){
+            var item = options.availableRoles[i];
+            var args = {
+                id:ko.observable(item.id),
+                name:ko.observable(item.name),
+                selected:ko.observable(this.roles.filterByProperty('id',item.id)().length>0)
+            };
+            this.addAvailableRole(args);
         }
 
     }
@@ -52,8 +70,11 @@ define('models/accounts', ['knockout'], function (ko) {
             this.accounts.push(new Account(options));
         }
 
-        for (var i = 0; i < options.accounts.length; i++)
-            this.addAccount(options.accounts[i]);
+        for (var i = 0; i < options.accounts.length; i++){
+            var item = options.accounts[i];
+            item.availableRoles = options.availableRoles;
+            this.addAccount(item);
+        }
     }
     return{
         AccountList:AccountList,

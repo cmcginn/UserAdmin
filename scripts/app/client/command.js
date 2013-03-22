@@ -60,7 +60,7 @@
 
  $(document).on('click', '.command', function (e) {
      var $this = $(this);
-     var option = {action:$this.data('action'),target:$this.data('target')};
+     var option = {action:$this.data('command-action'),target:$this.data('command-target')};
     $(this).command(option)
   })
 

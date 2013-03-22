@@ -3,7 +3,9 @@ requirejs.config({
     paths:{
         'app':'../app',
         'client':'../app/client',
+        'controls':'../app/client/controls',
         'views':'../app/client/views',
+        'viewmodels':'../app/client/viewmodels',
         'mock':'../app/client/mock',
         'models':'../app/client/models'
     },

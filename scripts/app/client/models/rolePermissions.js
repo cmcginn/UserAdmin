@@ -15,14 +15,16 @@ define('models/rolePermissions', ['knockout'], function (ko) {
             };
             this.addPermission(args);
         }
-        this.validate=function(){}
+        this.validate=function(){
+
+        }
         this.saveRolePermission = function () {
             this.validate();
             if (this.errors().length == 0)
                 $(document).trigger({type:'saveRolePermission', args:{data:this}});
 
         }
-    }
+    };
 
     var RolePermissionList = function (options) {
         this.rolePermissions = ko.observableArray();
@@ -31,10 +33,10 @@ define('models/rolePermissions', ['knockout'], function (ko) {
         }
         for (var i = 0; i < options.rolePermissions.length; i++)
             this.addRolePermission(new RolePermission(options.rolePermissions[i]));
-    }
+    };
 
     return{
         RolePermissionList:RolePermissionList
-    }
+    };
 
-})
+});

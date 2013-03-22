@@ -2,14 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6ab20bb-801a-4296-affd-ba39bade3a0a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/app/client/bindinghandlers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/lib/ko.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/scratch.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/api.js" afterPath="$PROJECT_DIR$/scripts/app/client/api.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/bootstrapper.js" afterPath="$PROJECT_DIR$/scripts/app/client/bootstrapper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/command.js" afterPath="$PROJECT_DIR$/scripts/app/client/command.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/dataservice.js" afterPath="$PROJECT_DIR$/scripts/app/client/dataservice.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/models/accounts.js" afterPath="$PROJECT_DIR$/scripts/app/client/models/accounts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/models/pagedList.js" afterPath="$PROJECT_DIR$/scripts/app/client/models/pagedList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/models/permissions.js" afterPath="$PROJECT_DIR$/scripts/app/client/models/permissions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/models/rolePermissions.js" afterPath="$PROJECT_DIR$/scripts/app/client/models/rolePermissions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/pager.js" afterPath="$PROJECT_DIR$/scripts/app/client/pager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/viewmodels/accounts.js" afterPath="$PROJECT_DIR$/scripts/app/client/viewmodels/accounts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/viewmodels/main.js" afterPath="$PROJECT_DIR$/scripts/app/client/viewmodels/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/viewmodels/permissions.js" afterPath="$PROJECT_DIR$/scripts/app/client/viewmodels/permissions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/viewmodels/rolePermissions.js" afterPath="$PROJECT_DIR$/scripts/app/client/viewmodels/rolePermissions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/viewmodels/roles.js" afterPath="$PROJECT_DIR$/scripts/app/client/viewmodels/roles.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/viewmodels/users.js" afterPath="$PROJECT_DIR$/scripts/app/client/viewmodels/users.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/views/main.js" afterPath="$PROJECT_DIR$/scripts/app/client/views/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/lib/bootstrap/bootstrap-collapse.js" afterPath="$PROJECT_DIR$/scripts/lib/bootstrap/bootstrap-collapse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/lib/knockout.js" afterPath="$PROJECT_DIR$/scripts/lib/knockout.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/lib/ko.js" afterPath="$PROJECT_DIR$/scripts/lib/ko.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/main.js" afterPath="$PROJECT_DIR$/scripts/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.html" afterPath="$PROJECT_DIR$/views/index.html" />
     </list>
     <ignored path="UserAdmin.iws" />
@@ -30,40 +41,78 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="36" selection-start="5072" selection-end="5072" vertical-scroll-proportion="0.78554505">
+            <state line="103" column="76" selection-start="4461" selection-end="4461" vertical-scroll-proportion="-22.153847">
               <folding>
-                <element signature="tag#ul#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#1;tag#script#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#1;tag#script#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#script#2;tag#head#0;tag#html#0" expanded="false" />
+                <element signature="tag#script#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#script#3;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#script#4;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="tag#div#1;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="pagedList.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/app/client/models/pagedList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="53" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="api.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/app/client/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="21" selection-start="4365" selection-end="4365" vertical-scroll-proportion="0.0">
+            <state line="83" column="28" selection-start="3706" selection-end="3706" vertical-scroll-proportion="0.508046">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/main.js">
+      <file leaf-file-name="roles.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/app/client/models/roles.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="39" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/app/client/views/main.js">
+      <file leaf-file-name="dataservice.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/app/client/dataservice.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="47" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
+            <state line="58" column="40" selection-start="2326" selection-end="2326" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#751#1314#0" expanded="false" />
+                <element signature="e#1367#1434#0" expanded="false" />
+                <element signature="e#1473#1548#0" expanded="false" />
+                <element signature="e#2487#2854#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="accounts.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/app/client/models/accounts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="60" column="82" selection-start="2202" selection-end="2202" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="command.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/app/client/command.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="0" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -72,10 +121,26 @@
       <file leaf-file-name="ko.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/lib/ko.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="2" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#157#0" expanded="false" />
-              </folding>
+            <state line="8" column="0" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/app/client/viewmodels/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="104" selection-start="1152" selection-end="1152" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="accounts.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/app/client/viewmodels/accounts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="38" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,28 +158,28 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/scripts/app/client/models/rolePermissions.js" />
-        <option value="$PROJECT_DIR$/scripts/app/client/views/users.js" />
-        <option value="$PROJECT_DIR$/scripts/app/client/command.js" />
-        <option value="$PROJECT_DIR$/scripts/app/client/dataservice.js" />
-        <option value="$PROJECT_DIR$/scripts/app/client/api.js" />
-        <option value="$PROJECT_DIR$/scripts/app/client/views/accounts.js" />
-        <option value="$PROJECT_DIR$/scripts/app/client/models/accounts.js" />
-        <option value="$PROJECT_DIR$/scripts/lib/bootstrap/bootstrap-collapse.js" />
-        <option value="$PROJECT_DIR$/views/scratch.html" />
-        <option value="$PROJECT_DIR$/scripts/app/client/bindinghandlers.js" />
-        <option value="$PROJECT_DIR$/scripts/lib/knockout-wrap.js" />
-        <option value="$PROJECT_DIR$/scripts/lib/knockout.js" />
-        <option value="$PROJECT_DIR$/scripts/main.js" />
-        <option value="$PROJECT_DIR$/scripts/lib/ko.js" />
+        <option value="$PROJECT_DIR$/scripts/app/client/viewmodels/rolePermissions.js" />
+        <option value="$PROJECT_DIR$/scripts/app/client/viewmodels/roles.js" />
+        <option value="$PROJECT_DIR$/scripts/app/client/viewmodels/users.js" />
         <option value="$PROJECT_DIR$/scripts/app/client/views/main.js" />
+        <option value="$PROJECT_DIR$/scripts/main.js" />
+        <option value="$PROJECT_DIR$/scripts/app/client/controls/pager.js" />
+        <option value="$PROJECT_DIR$/scripts/app/client/pager.js" />
+        <option value="$PROJECT_DIR$/scripts/app/client/command.js" />
+        <option value="$PROJECT_DIR$/scripts/lib/ko.js" />
+        <option value="$PROJECT_DIR$/scripts/app/client/models/pagedList.js" />
+        <option value="$PROJECT_DIR$/scripts/app/client/viewmodels/main.js" />
+        <option value="$PROJECT_DIR$/scripts/app/client/dataservice.js" />
+        <option value="$PROJECT_DIR$/scripts/app/client/viewmodels/accounts.js" />
         <option value="$PROJECT_DIR$/views/index.html" />
+        <option value="$PROJECT_DIR$/scripts/app/client/models/accounts.js" />
+        <option value="$PROJECT_DIR$/scripts/app/client/api.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="width" value="1928" />
+    <option name="width" value="1926" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -251,7 +316,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -292,13 +357,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1928" height="1056" extended-state="0" />
+    <frame x="-8" y="0" width="1926" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24986765" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24960254" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -366,128 +431,123 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scripts/app/client/models/rolePermissions.js">
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/viewmodels/roles.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="35" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#461#703#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/client/dataservice.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="65" selection-start="1906" selection-end="1906" vertical-scroll-proportion="0.0">
+        <state line="0" column="18" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/client/views/accounts.js">
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/viewmodels/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="36" selection-start="953" selection-end="953" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#157#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="17" column="2" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/client/models/accounts.js">
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/bootstrapper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="1087" selection-end="1087" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/views/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="3" selection-start="227" selection-end="227" vertical-scroll-proportion="0.1367816" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/pager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="33" selection-start="718" selection-end="718" vertical-scroll-proportion="0.12068965">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/lib/bootstrap/bootstrap-collapse.js">
+    <entry file="file://$PROJECT_DIR$/scripts/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="17" selection-start="4735" selection-end="4735" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/scratch.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="3" selection-start="177" selection-end="255" vertical-scroll-proportion="-3.9230769">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/client/bindinghandlers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="743" selection-end="743" vertical-scroll-proportion="0.0">
+        <state line="17" column="0" selection-start="479" selection-end="479" vertical-scroll-proportion="0.3321839">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/app/client/command.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="22" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.0">
+        <state line="51" column="0" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/client/config.js">
+    <entry file="file://$PROJECT_DIR$/scripts/lib/ko.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/models/roles.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/client/bootstrapper.js">
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/viewmodels/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="16" selection-start="195" selection-end="199" vertical-scroll-proportion="0.0">
+        <state line="22" column="104" selection-start="1152" selection-end="1152" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/lib/knockout.js">
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/dataservice.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="0" selection-start="40939" selection-end="40939" vertical-scroll-proportion="0.0">
+        <state line="58" column="40" selection-start="2326" selection-end="2326" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#751#1314#0" expanded="false" />
+            <element signature="e#1367#1434#0" expanded="false" />
+            <element signature="e#1473#1548#0" expanded="false" />
+            <element signature="e#2487#2854#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/lib/ko.js">
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/viewmodels/accounts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="2" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#157#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="39" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/client/views/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="47" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/client/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="21" selection-start="4365" selection-end="4365" vertical-scroll-proportion="0.0">
+        <state line="17" column="38" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="36" selection-start="5072" selection-end="5072" vertical-scroll-proportion="0.78554505">
+        <state line="103" column="76" selection-start="4461" selection-end="4461" vertical-scroll-proportion="-22.153847">
           <folding>
-            <element signature="tag#ul#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#1;tag#script#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#1;tag#script#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#script#2;tag#head#0;tag#html#0" expanded="false" />
+            <element signature="tag#script#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#script#3;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#script#4;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="tag#div#1;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/models/accounts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="82" selection-start="2202" selection-end="2202" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/models/pagedList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="53" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="28" selection-start="3706" selection-end="3706" vertical-scroll-proportion="0.508046">
+          <folding />
         </state>
       </provider>
     </entry>

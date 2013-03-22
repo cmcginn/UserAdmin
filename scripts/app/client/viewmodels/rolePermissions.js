@@ -1,4 +1,4 @@
-define('views/rolePermissions',['knockout','models/rolePermissions'],function(ko,rolePermissions){
+define('viewmodels/rolePermissions',['knockout','models/rolePermissions'],function(ko,rolePermissions){
 
     var rolePermissionsViewModel={
         self:this,
