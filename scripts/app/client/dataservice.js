@@ -35,9 +35,9 @@ define('client/dataservice', ['lodash', 'amplify', 'client/api'],
                 getAccountsComplete:'getAccountsComplete',
                 getRolePermissionsComplete:'getRolePermissionsComplete',
                 postAccountComplete:'postAccountComplete',
-                postPermissionComplete:'postPermissionComplete',
                 getPermissionsComplete:'getPermissionsComplete',
-                getPagedListComplete:'getPagedListComplete'
+                getPagedListComplete:'getPagedListComplete',
+                postRoleComplete:'postRoleComplete'
             },
             subscribe = function (event, callback) {
                 amplify.subscribe(event, callback);
@@ -93,6 +93,10 @@ define('client/dataservice', ['lodash', 'amplify', 'client/api'],
                 permission:function (options) {
                     options.completed = events.postPermissionComplete;
                     api.post.permission(options);
+                },
+                role:function(options){
+                    options.completed=events.postRoleComplete;
+                    api.post.role(options);
                 }
             }
         return{

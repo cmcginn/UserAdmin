@@ -75,8 +75,9 @@ define('client/api', ['lodash', 'amplify', 'jquery.mockjson'], function (_, ampl
                 amplify.publish(options.completed, api.result({rolePermissions:result}));
             },
             permissions:function (options) {
+                options=options||{};
                 var result = amplify.store("context").permissions;
-                amplify.publish(options.completed, api.result(amplify.store("permissions")));
+                amplify.publish(options.completed, api.result(result));
             },
             pagedList:function (options) {
                 var data = {name:'', count:0, size:options.size};
@@ -148,6 +149,18 @@ define('client/api', ['lodash', 'amplify', 'jquery.mockjson'], function (_, ampl
                 amplify.store("permissions", _permissions);
                 if (options.completed)
                     amplify.publish(options.completed, api.result(item));
+            },
+            role:function(options){
+                var ctx = amplify.store("context");
+                var args  = {
+                    id:ctx.roles.length+1,
+                    name:options.data.name,
+                    system:options.data.system
+                };
+                ctx.roles.push(args);
+                ctx.rolePermissions.push({role:args,permissions:[]});
+                amplify.store("context",ctx);
+                amplify.publish(options.completed,api.result(args));
             }
         }
 

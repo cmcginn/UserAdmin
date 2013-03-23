@@ -2,18 +2,21 @@ define('viewmodels/rolePermissions', ['knockout','knockout.mapping', 'models/rol
 
     var rolePermissionsViewModel = {
         self:this,
+        onGetPermissionsComplete:function(result){
+          rolePermissionsViewModel.availablePermissions = result.data;
+        },
         onGetRolesComplete:function(result){
           rolePermissionsViewModel.rolelist = result.data;
         },
         onGetRolePermissionsComplete:function (result) {
-            result.data.availablePermissions = rolePermissionsViewModel.rolelist.roles;
+            result.data.availablePermissions = rolePermissionsViewModel.availablePermissions;
             rolePermissionsViewModel.rolePermissionsList = new rolePermissions.RolePermissionList(result.data);
 
         },
         editRolePermission:function (options) {
              var item = rolePermissionsViewModel.rolePermissionsList.rolePermissions.filterByProperty('id',options.id)()[0];
 
-             ko.applyBindingsToNode(document.getElementById(options.placeholder), { template:{ name:'roleedit-template', data:item} });
+             ko.applyBindingsToNode(document.getElementById(options.placeholder), { template:{ name:'rolepermissionedit-template', data:item} });
         },
 
         applyTemplate:function () {

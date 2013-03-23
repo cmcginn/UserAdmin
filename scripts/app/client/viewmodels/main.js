@@ -1,10 +1,13 @@
-define('viewmodels/main', ['jquery', 'ko', 'knockout.mapping', 'lodash', 'notify', 'client/dataservice', 'client/command', 'client/bindinghandlers', 'viewmodels/accounts', 'viewmodels/rolePermissions', 'viewmodels/permissions', 'views/main'], function ($, ko, mapping, _, notify, ds, command, handlers, accounts, rolePermissions, permissions, view) {
+define('viewmodels/main', ['jquery', 'ko', 'knockout.mapping', 'lodash', 'notify', 'client/dataservice', 'client/command', 'client/bindinghandlers', 'viewmodels/accounts', 'viewmodels/rolePermissions', 'viewmodels/roles', 'viewmodels/permissions', 'views/main'], function ($, ko, mapping, _, notify, ds, command, handlers, accounts, rolePermissions, roles, permissions, view) {
 
     var
         self = this,
         commands = {
             addAccount:function () {
                 accounts.accountsViewModel.newAccount();
+            },
+            addRole:function (args) {
+                roles.rolesViewModel.addRole(args);
             },
             pageAccount:function () {
 
@@ -18,12 +21,15 @@ define('viewmodels/main', ['jquery', 'ko', 'knockout.mapping', 'lodash', 'notify
             cancelNewAccount:function () {
                 accounts.accountsViewModel.cancelNewAccount();
             },
-            saveRole:function(args){
-                $(document).one('saveRolePermission',function(event){
-                   ds.put.rolePermissions({data:event.args.data});
+            saveRolePermission:function (args) {
+                $(document).one('saveRolePermission', function (event) {
+                    ds.put.rolePermissions({data:event.args.data});
                 });
                 rolePermissions.rolePermissionsViewModel.saveRolePermission(args);
 
+            },
+            saveRole:function (args) {
+                roles.rolesViewModel.saveNewRole(args);
             },
             navigate:function (args) {
                 switch (args.commandLocation) {
@@ -41,6 +47,13 @@ define('viewmodels/main', ['jquery', 'ko', 'knockout.mapping', 'lodash', 'notify
             ds.subscribe(ds.events.getAccountsComplete, accounts.accountsViewModel.onGetAccountsComplete);
             ds.subscribe(ds.events.getRolesComplete, accounts.accountsViewModel.onGetRolesComplete);
             ds.subscribe(ds.events.getRolesComplete, rolePermissions.rolePermissionsViewModel.onGetRolesComplete);
+            ds.subscribe(ds.events.getPermissionsComplete, rolePermissions.rolePermissionsViewModel.onGetPermissionsComplete);
+            ds.subscribe(ds.events.getRolePermissionsComplete, rolePermissions.rolePermissionsViewModel.onGetRolePermissionsComplete);
+            ds.subscribe(ds.events.postRoleComplete,function(){
+                ds.get.accounts();
+                ds.get.rolePermissions();
+                rolePermissions.rolePermissionsViewModel.applyTemplate();
+            });
             $.when(ds.get.pagedList({list:'accounts', size:accountPageSize}))
                 .then(ds.get.roles())
                 .then(ds.get.accounts({start:0, count:accountPageSize}));
@@ -55,14 +68,19 @@ define('viewmodels/main', ['jquery', 'ko', 'knockout.mapping', 'lodash', 'notify
                 }
 
             });
+            $(document).on('saveNewRole', function (event) {
+                ds.post.role({data:mapping.toJS(event.args.data)});
+            });
         },
         navigateRoles = function () {
-            ds.subscribe(ds.events.getRolePermissionsComplete, function (data) {
-                rolePermissions.rolePermissionsViewModel.onGetRolePermissionsComplete(data);
-                rolePermissions.rolePermissionsViewModel.applyTemplate();
-            });
 
-            ds.get.rolePermissions();
+
+            $.when(ds.get.permissions()).then(function () {
+                ds.get.rolePermissions();
+            }).then(function () {
+                    rolePermissions.rolePermissionsViewModel.applyTemplate();
+                });
+
 
         }
     /*init = function () {

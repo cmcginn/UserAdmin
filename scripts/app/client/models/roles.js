@@ -3,6 +3,18 @@ define('models/roles', ['knockout'], function (ko) {
         this.id = ko.observable(options.id);
         this.name = ko.observable(options.name);
         this.system = ko.observable(options.system);
+        this.errors=ko.observableArray();
+        this.validate=function(){
+            var err=[];
+            if(!this.name())
+                err.push({error:'Role Name is Required'});
+            this.errors(err);
+        }
+        this.saveNewRole=function(){
+            this.validate();
+            if(this.errors().length==0)
+                $(document).trigger({type:'saveNewRole',args:{data:this}});
+        }
     }
     var Rolelist = function (options) {
         this.roles = ko.observableArray();
@@ -16,6 +28,7 @@ define('models/roles', ['knockout'], function (ko) {
     }
 
     return{
-        Rolelist:Rolelist
+        Rolelist:Rolelist,
+        Role:Role
     }
 })
