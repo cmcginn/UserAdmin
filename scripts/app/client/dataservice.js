@@ -1,11 +1,13 @@
 define('client/dataservice', ['lodash', 'amplify', 'client/api'],
     function (_, amplify, api) {
         var
-            self=this,
+            self = this,
 
             context = {
-              accounts:[],
-              roles:[]
+                accounts:[],
+                roles:[],
+                rolePermissions:[],
+                permissions:[]
             },
 
             init = function () {
@@ -20,8 +22,11 @@ define('client/dataservice', ['lodash', 'amplify', 'client/api'],
                     dataType:"json",
                     type:"POST"
                 });
-                amplify.store("context",context);
-                api.init();
+                if(!amplify.store("context"))
+                {
+                    amplify.store("context", context);
+                    api.init();
+                }
             },
             events = {
                 getUsersComplete:'getUsersComplete',
@@ -42,21 +47,23 @@ define('client/dataservice', ['lodash', 'amplify', 'client/api'],
             },
             get = {
                 rolePermissions:function (options) {
-                    api.get.rolePermissions({completed:events.getRolePermissionsComplete});
+                    options = options||{};
+                    options.completed = events.getRolePermissionsComplete
+                    api.get.rolePermissions(options);
                 },
                 accounts:function (options) {
-                    options.completed=events.getAccountsComplete;
+                    options.completed = events.getAccountsComplete;
                     api.get.accounts(options);
                 },
                 permissions:function (options) {
                     api.get.permissions({completed:events.getPermissionsComplete});
                 },
-                pagedList:function(options){
+                pagedList:function (options) {
                     options.completed = events.getPagedListComplete;
                     api.get.pagedList(options);
                 },
-                roles:function(options){
-                    options=options||{};
+                roles:function (options) {
+                    options = options || {};
                     options.completed = events.getRolesComplete;
                     api.get.roles(options);
                 }
@@ -67,8 +74,8 @@ define('client/dataservice', ['lodash', 'amplify', 'client/api'],
                     api.put.account(options);
 
                 },
-                rolePermission:function (options) {
-                    api.put.rolePermission(options);
+                rolePermissions:function (options) {
+                    api.put.rolePermissions(options);
                 },
                 permission:function (options) {
                     api.put.permission(options);
@@ -77,7 +84,7 @@ define('client/dataservice', ['lodash', 'amplify', 'client/api'],
             },
             post = {
                 account:function (options) {
-                    options.completed = function(result){
+                    options.completed = function (result) {
                         context.accounts = result.data;
                         events.postAccountComplete(result);
                     };

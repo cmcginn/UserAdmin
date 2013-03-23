@@ -1,85 +1,90 @@
 define('client/api', ['lodash', 'amplify', 'jquery.mockjson'], function (_, amplify, mock) {
 
     _permissions = {permissions:[
-        {id:1, name:'Edit Users', system:false,selected:false},
-        {id:2, name:'Edit Posts', system:false,selected:false},
-        {id:3, name:'Message Users', system:false,selected:false}
+        {id:1, name:'Edit Users', system:false, selected:false},
+        {id:2, name:'Edit Posts', system:false, selected:false},
+        {id:3, name:'Message Users', system:false, selected:false}
     ]};
     var api = {
-        init:function(){
+        init:function () {
+
             var ctx = amplify.store("context");
             ctx.roles = [
-                            {id:1, name:'Administrators', system:true},
-                            {id:2, name:'System', system:true},
-                            {id:3, name:'Editors', system:false},
-                            {id:4, name:'Registered', system:false}
-                        ];
-            var accountList=$.mockJSON.generateFromTemplate({
-                        'accounts|8-20':[
-                            {
-                                'userId|+1':1,
-                                'username':'@LAST_NAME',
-                                'password':'@LOREM'
+                {id:1, name:'Administrators', system:true},
+                {id:2, name:'System', system:true},
+                {id:3, name:'Editors', system:false},
+                {id:4, name:'Registered', system:false}
+            ];
+            var accountList = $.mockJSON.generateFromTemplate({
+                'accounts|8-20':[
+                    {
+                        'userId|+1':1,
+                        'username':'@LAST_NAME',
+                        'password':'@LOREM'
 
-                            }
-                        ]
-                    });
-            for(var i=0;i<accountList.accounts.length;i++)
+                    }
+                ]
+            });
+            ctx.permissions = [
+                {id:1, name:'All', system:true},
+                {id:2, name:'Edit Posts', system:true},
+                {id:3, name:'Create Posts', system:true},
+                {id:4, name:'Third Party Authentication', system:true}
+            ];
+
+            ctx.rolePermissions = [
+                {role:ctx.roles[0],
+                    permissions:ctx.permissions},
+                {role:ctx.roles[1],
+                    permissions:[
+                        ctx.permissions[1],
+                        ctx.permissions[2]
+                    ]},
+                {role:ctx.roles[2], permissions:[]},
+                {role:ctx.roles[3], permissions:[]}
+            ];
+
+            for (var i = 0; i < accountList.accounts.length; i++)
                 ctx.accounts.push(accountList.accounts[i]);
-            for(var i=0;i<ctx.accounts.length;i++)
-                ctx.accounts[i].roles=[ctx.roles[3]];
+            for (var i = 0; i < ctx.accounts.length; i++)
+                ctx.accounts[i].roles = [ctx.roles[3]];
 
-            amplify.store("context",ctx);
+            amplify.store("context", ctx);
         },
         result:function (data) {
             return {data:data, status:'200', xhr:data};
         },
         get:{
             accounts:function (options) {
-                var result=amplify.store("context").accounts;
-                if(options.start)
+                var result = amplify.store("context").accounts;
+                if (options.start)
                     result = result.slice(options.start);
-                if(options.count)
-                    result = result.slice(0,options.count);
+                if (options.count)
+                    result = result.slice(0, options.count);
                 amplify.publish(options.completed, api.result({accounts:result}));
 
             },
-            roles:function(options){
-                var result=amplify.store("context").roles;
+            roles:function (options) {
+                options = options || {};
+                var result = amplify.store("context").roles;
                 amplify.publish(options.completed, api.result({roles:result}));
             },
             rolePermissions:function (options) {
-                if (amplify.store("rolePermissions") == undefined) {
-                    var data = {rolePermissions:[
-                        {id:1, name:'Administrators', system:true},
-                        {id:2, name:'System', system:true},
-                        {id:3, name:'Editors', system:false},
-                        {id:4, name:'Registered', system:false}
-
-                    ]};
-                    for (var i = 0; i < data.rolePermissions.length; i++) {
-                        data.rolePermissions[i].permissions = _permissions.permissions;
-
-                    }
-                    amplify.store("rolePermissions", data);
-                }
-                amplify.publish(options.completed, api.result(amplify.store("rolePermissions")));
+                options = options || {};
+                var result = amplify.store("context").rolePermissions;
+                amplify.publish(options.completed, api.result({rolePermissions:result}));
             },
             permissions:function (options) {
-                if (amplify.store('permissions') == undefined) {
-                    var data = _permissions;
-                    amplify.store("permissions", data);
-                }
+                var result = amplify.store("context").permissions;
                 amplify.publish(options.completed, api.result(amplify.store("permissions")));
             },
-            pagedList:function(options){
-                var data = {name:'',count:0,size:options.size};
-                switch(options.list)
-                {
+            pagedList:function (options) {
+                var data = {name:'', count:0, size:options.size};
+                switch (options.list) {
                     case 'accounts':
-                        if(amplify.store("accounts") != undefined)
+                        if (amplify.store("accounts") != undefined)
                             data.name = 'accounts';
-                            data.count = amplify.store("context").accounts.length;
+                        data.count = amplify.store("context").accounts.length;
                         break;
                     default:
                         break;
@@ -98,19 +103,18 @@ define('client/api', ['lodash', 'amplify', 'jquery.mockjson'], function (_, ampl
                 }
                 amplify.store("accounts", data);
             },
-            rolePermission:function (options) {
-                var data = amplify.store("rolePermissions");
-                var item = _.first(data.rolePermissions, {id:options.id})[0];
-                for (var i = 0; i < options.permissions.length; i++) {
-                    item.permissions[i].selected = options.permissions[i].selected;
-                }
-                amplify.store("rolePermissions", data);
+            rolePermissions:function (options) {
+                var ctx = amplify.store("context");
+                var selectedItem = _.where(ctx.rolePermissions,{'role':{'id':options.data.id}})[0];
+                selectedItem.permissions=_.where(options.data.availablePermissions,{'selected':true});
+                amplify.store("context",ctx);
+
             },
             permission:function (options) {
 
                 var item = _.first(_permissions.permissions, {id:options.id})[0];
                 item.name = options.name;
-                item.system=options.system;
+                item.system = options.system;
                 amplify.store("permissions", _permissions);
             }
         },

@@ -16,6 +16,7 @@ define('viewmodels/accounts',['knockout','lodash','models/accounts','models/page
         },
         onGetRolesComplete:function(result){
             self.rolelist=result.data;
+
         },
         onGetAccountsComplete:function (result) {
             result.data.availableRoles = rolelist.roles;

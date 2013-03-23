@@ -212,7 +212,7 @@
 <script type="text/html" id="rolepermissionlist-template">
     <div data-bind="foreach:rolePermissions">
         <div class="row-fluid">
-            <div class="accordion" data-bind="attr:{'id':'role_permission_' + id()}">
+            <div class="accordion" data-bind="attr:{'id':'role_' + id()}">
                 <div class="accordion-group">
                     <div class="accordion-heading">
                         <div class="row-fluid">
@@ -225,8 +225,9 @@
                             <div class="span4">
                                 <div class="btn-group row-fluid">
                                     <div class="span6">
-                                        <a class="accordion-toggle btn btn-primary" data-toggle="collapse"
-                                           data-bind="attr:{'data-parent':'#role_permission_' + id(),'href':'#role_permission_body_' + id()}"
+                                        <a class="accordion-toggle btn btn-primary command" data-toggle="collapse"
+                                           data-command-target="commands" data-command-action="editRolePermission"
+                                           data-bind="attr:{'data-parent':'#role_' + id(),'href':'#role_body_' + id(),'data-id':id(),'data-placeholder':'roleedit_'+id()}"
                                                 >
                                             Edit
                                         </a>
@@ -238,35 +239,64 @@
                             </div>
                         </div>
                     </div>
-                    <div data-bind="attr:{'id':'role_permission_body_' + id()}"
+                    <div data-bind="attr:{'id':'role_body_' + id()}"
                          class="accordion-body collapse">
                         <div class="accordion-inner">
-
-                            <div class="row-fluid" data-bind="foreach:permissions">
-                                <div class="row-fluid">
-                                    <div class="span1">
-                                        <span data-bind="text:id"></span>
-                                    </div>
-                                    <div class="span4">
-                                        <span data-bind="text:name"></span>
-                                    </div>
-                                    <div class="span1">
-                                        <input type="checkbox" data-bind="checked:selected">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row-fluid">
-                                <a href="javascript:void(0)" class="btn btn-primary"
-                                   data-bind="click:saveRolePermission">Save</a>
-                                <a href="javascript:void(0)"
-                                   data-bind="attr:{'data-parent':'#role_permission_' + id(),'href':'#role_permission_body_' + id()}"
-                                   data-toggle="collapse" class="btn">Cancel</a>
-                            </div>
+                            <div data-bind="attr:{'id':'roleedit_'+id()}"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</script>
+<script type="text/html" id="roleedit-template">
+    <div class="row-fluid">
+        <div class="row-fluid">
+            <div class="span1">
+                <span data-bind="text:id"></span>
+            </div>
+            <div class="span4">
+                <span data-bind="text:name"></span>
+            </div>
+            <div class="span2">
+                <span>System</span>
+            </div>
+
+            <div class="span1">
+                <input type="checkbox" data-bind="checked:system">
+            </div>
+        </div>
+        <div class="row-fluid">
+            <h2>Role Permssions</h2>
+        </div>
+        <div class="row-fluid">
+            <div class="span8 offset2">
+                <div data-bind="foreach:availablePermissions">
+                    <hr/>
+                    <div class="row-fluid">
+                        <div class="span1">
+                            <span data-bind="text:id"></span>
+                        </div>
+                        <div class="span3">
+                            <span data-bind="text:name"></span>
+                        </div>
+                        <div class="span2">
+                            <input type="checkbox" data-bind="checked:selected">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row-fluid">
+        <a href="javascript:void(0)" class="btn btn-primary command" data-command-target="commands" data-command-action="saveRole"
+           data-bind="attr:{'data-parent':'#role_' + id(),'data-command-id':id(),'href':'#roleedit_' + id(),'data-toggle':'collapse'}">Save</a>
+        <a href="javascript:void(0)"
+           data-bind="attr:{'data-parent':'#role_' + id(),'href':'#roleedit_' + id()}"
+           data-toggle="collapse" class="btn">Cancel</a>
     </div>
 </script>
 <script type="text/html" id="newaccount-template">
@@ -295,6 +325,15 @@
         </div>
     </div>
 </script>
+<script type="text/html" id="pager-template">
+    <div class="row-fluid">
+        <div class="pager" data-bind="attr:{'data-list':name(),'data-size':size(),'data-count':count()}">
+            <div data-bind="foreach:pages">
+                <a href="javascript:void(0);" data-bind="text:label,click:select"></a>
+            </div>
+        </div>
+    </div>
+</script>
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span4">
@@ -312,9 +351,16 @@
             <div class="row-fluid">
                 <div class="span8">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a data-toggle="tab" href="#users">User Administration</a></li>
-                        <li><a data-toggle="tab" href="#roles">Role Administration</a></li>
-                        <li><a data-toggle="tab" href="#permissions">Permissions Administration</a></li>
+                        <li class="active"><a data-toggle="tab" class="command" data-command-target="commands"
+                                              data-command-action="navigate" data-command-location="accounts"
+                                              href="#users">User
+                            Administration</a></li>
+                        <li><a data-toggle="tab" class="command" data-command-target="commands"
+                               data-command-action="navigate" data-command-location="roles" href="#roles">Role
+                            Administration</a></li>
+                        <li><a data-toggle="tab" href="#permissions" class="command" data-command-target="commands"
+                               data-command-action="navigate" data-command-location="permissions">Permissions
+                            Administration</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" id="users">
@@ -334,15 +380,7 @@
     </div>
 </div>
 
-<script type="text/html" id="pager-template">
-    <div class="row-fluid">
-        <div class="pager" data-bind="attr:{'data-list':name(),'data-size':size(),'data-count':count()}">
-            <div data-bind="foreach:pages">
-                <a href="javascript:void(0);" data-bind="text:label,click:select"></a>
-            </div>
-        </div>
-    </div>
-</script>
+
 <script type="text/javascript" src="../scripts/lib/bootstrap/bootstrap-collapse.js"></script>
 <script type="text/javascript" src="../scripts/lib/bootstrap/bootstrap-tab.js"></script>
 <script type="text/javascript" src="../scripts/app/pager.js"></script>

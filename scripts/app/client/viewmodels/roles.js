@@ -6,8 +6,12 @@ define('viewmodels/roles', ['jquery','knockout', 'lodash','models/roles', 'clien
             self.rolelist = new rolesmodel.Rolelist(result.data);
             //
         },
+        editRole:function(options){
+            var item = self.rolelist.roles.filterByProperty('id',options.id)()[0];
+            ko.applyBindingsToNode(document.getElementById(options.placeholder), { template:{ name:'roleedit-template', data:item} });
+        },
         applyTemplate:function(options){
-            ko.applyBindingsToNode($(options.selector)[0], { template:{ name:'rolelist-template', data:self.rolelist} });
+            ko.applyBindingsToNode(document.getElementById('rolepermissionlist'), { template:{ name:'rolepermissionlist-template', data:self.rolelist} });
         }
     }
     return{

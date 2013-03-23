@@ -4,23 +4,12 @@
     <list default="true" id="c6ab20bb-801a-4296-affd-ba39bade3a0a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/api.js" afterPath="$PROJECT_DIR$/scripts/app/client/api.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/bootstrapper.js" afterPath="$PROJECT_DIR$/scripts/app/client/bootstrapper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/command.js" afterPath="$PROJECT_DIR$/scripts/app/client/command.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/dataservice.js" afterPath="$PROJECT_DIR$/scripts/app/client/dataservice.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/models/accounts.js" afterPath="$PROJECT_DIR$/scripts/app/client/models/accounts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/models/pagedList.js" afterPath="$PROJECT_DIR$/scripts/app/client/models/pagedList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/models/permissions.js" afterPath="$PROJECT_DIR$/scripts/app/client/models/permissions.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/models/rolePermissions.js" afterPath="$PROJECT_DIR$/scripts/app/client/models/rolePermissions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/pager.js" afterPath="$PROJECT_DIR$/scripts/app/client/pager.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/viewmodels/accounts.js" afterPath="$PROJECT_DIR$/scripts/app/client/viewmodels/accounts.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/viewmodels/main.js" afterPath="$PROJECT_DIR$/scripts/app/client/viewmodels/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/viewmodels/permissions.js" afterPath="$PROJECT_DIR$/scripts/app/client/viewmodels/permissions.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/viewmodels/rolePermissions.js" afterPath="$PROJECT_DIR$/scripts/app/client/viewmodels/rolePermissions.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/viewmodels/roles.js" afterPath="$PROJECT_DIR$/scripts/app/client/viewmodels/roles.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/viewmodels/users.js" afterPath="$PROJECT_DIR$/scripts/app/client/viewmodels/users.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/app/client/views/main.js" afterPath="$PROJECT_DIR$/scripts/app/client/views/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/lib/ko.js" afterPath="$PROJECT_DIR$/scripts/lib/ko.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/main.js" afterPath="$PROJECT_DIR$/scripts/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.html" afterPath="$PROJECT_DIR$/views/index.html" />
     </list>
     <ignored path="UserAdmin.iws" />
@@ -41,28 +30,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/index.html">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/app/client/viewmodels/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="76" selection-start="4461" selection-end="4461" vertical-scroll-proportion="-22.153847">
-              <folding>
-                <element signature="tag#script#2;tag#head#0;tag#html#0" expanded="false" />
-                <element signature="tag#script#2;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#script#3;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#script#4;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="tag#div#1;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pagedList.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/app/client/models/pagedList.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="53" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0">
+            <state line="22" column="64" selection-start="1123" selection-end="1123" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -71,8 +42,47 @@
       <file leaf-file-name="api.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/app/client/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="28" selection-start="3706" selection-end="3706" vertical-scroll-proportion="0.508046">
+            <state line="107" column="42" selection-start="4468" selection-end="4468" vertical-scroll-proportion="0.46896553">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dataservice.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/app/client/dataservice.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="19" selection-start="710" selection-end="710" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="accounts.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/app/client/viewmodels/accounts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="3" selection-start="1250" selection-end="1336" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rolePermissions.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/app/client/viewmodels/rolePermissions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="83" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="roles.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/app/client/viewmodels/roles.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="115" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1364042306927" expanded="true" signature="132:877" placeholder="{...}" />
+                <marker date="1364042306927" expanded="true" signature="159:818" placeholder="{&quot;rolelist&quot;: null...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -86,61 +96,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dataservice.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/app/client/dataservice.js">
+      <file leaf-file-name="rolePermissions.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/app/client/models/rolePermissions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="40" selection-start="2326" selection-end="2326" vertical-scroll-proportion="0.0">
+            <state line="27" column="0" selection-start="1107" selection-end="1107" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="295" column="58" selection-start="12717" selection-end="12717" vertical-scroll-proportion="-2.4230769">
               <folding>
-                <element signature="e#751#1314#0" expanded="false" />
-                <element signature="e#1367#1434#0" expanded="false" />
-                <element signature="e#1473#1548#0" expanded="false" />
-                <element signature="e#2487#2854#0" expanded="false" />
+                <element signature="tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#script#2;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#0;tag#script#4;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#script#5;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#script#6;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="accounts.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/app/client/models/accounts.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="82" selection-start="2202" selection-end="2202" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="command.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/app/client/command.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="0" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ko.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/lib/ko.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/app/client/viewmodels/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="104" selection-start="1152" selection-end="1152" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="accounts.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/app/client/viewmodels/accounts.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="38" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -158,9 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/scripts/app/client/viewmodels/rolePermissions.js" />
-        <option value="$PROJECT_DIR$/scripts/app/client/viewmodels/roles.js" />
-        <option value="$PROJECT_DIR$/scripts/app/client/viewmodels/users.js" />
         <option value="$PROJECT_DIR$/scripts/app/client/views/main.js" />
         <option value="$PROJECT_DIR$/scripts/main.js" />
         <option value="$PROJECT_DIR$/scripts/app/client/controls/pager.js" />
@@ -168,11 +141,14 @@
         <option value="$PROJECT_DIR$/scripts/app/client/command.js" />
         <option value="$PROJECT_DIR$/scripts/lib/ko.js" />
         <option value="$PROJECT_DIR$/scripts/app/client/models/pagedList.js" />
-        <option value="$PROJECT_DIR$/scripts/app/client/viewmodels/main.js" />
-        <option value="$PROJECT_DIR$/scripts/app/client/dataservice.js" />
-        <option value="$PROJECT_DIR$/scripts/app/client/viewmodels/accounts.js" />
-        <option value="$PROJECT_DIR$/views/index.html" />
         <option value="$PROJECT_DIR$/scripts/app/client/models/accounts.js" />
+        <option value="$PROJECT_DIR$/scripts/app/client/viewmodels/accounts.js" />
+        <option value="$PROJECT_DIR$/scripts/app/client/viewmodels/roles.js" />
+        <option value="$PROJECT_DIR$/views/index.html" />
+        <option value="$PROJECT_DIR$/scripts/app/client/viewmodels/main.js" />
+        <option value="$PROJECT_DIR$/scripts/app/client/models/rolePermissions.js" />
+        <option value="$PROJECT_DIR$/scripts/app/client/viewmodels/rolePermissions.js" />
+        <option value="$PROJECT_DIR$/scripts/app/client/dataservice.js" />
         <option value="$PROJECT_DIR$/scripts/app/client/api.js" />
       </list>
     </option>
@@ -316,6 +292,58 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserAdmin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserAdmin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="viewmodels" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserAdmin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="UserAdmin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -428,45 +456,11 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scripts/app/client/viewmodels/roles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="18" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/client/viewmodels/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="2" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/client/bootstrapper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/client/views/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="3" selection-start="227" selection-end="227" vertical-scroll-proportion="0.1367816" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/client/pager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="33" selection-start="718" selection-end="718" vertical-scroll-proportion="0.12068965">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="479" selection-end="479" vertical-scroll-proportion="0.3321839">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/app/client/command.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="51" column="0" selection-start="1258" selection-end="1258" vertical-scroll-proportion="0.0">
@@ -481,55 +475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/client/models/roles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/client/viewmodels/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="104" selection-start="1152" selection-end="1152" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/client/dataservice.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="40" selection-start="2326" selection-end="2326" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#751#1314#0" expanded="false" />
-            <element signature="e#1367#1434#0" expanded="false" />
-            <element signature="e#1473#1548#0" expanded="false" />
-            <element signature="e#2487#2854#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/app/client/viewmodels/accounts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="38" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="76" selection-start="4461" selection-end="4461" vertical-scroll-proportion="-22.153847">
-          <folding>
-            <element signature="tag#script#2;tag#head#0;tag#html#0" expanded="false" />
-            <element signature="tag#script#2;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#script#3;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#script#4;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="tag#div#1;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/app/client/models/accounts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="60" column="82" selection-start="2202" selection-end="2202" vertical-scroll-proportion="0.0">
@@ -539,14 +484,101 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/app/client/models/pagedList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="53" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0">
+        <state line="7" column="53" selection-start="387" selection-end="387" vertical-scroll-proportion="0.1367816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/views/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="3" selection-start="227" selection-end="227" vertical-scroll-proportion="0.1367816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/viewmodels/permissions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/models/roles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/viewmodels/roles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="115" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1364042306927" expanded="true" signature="132:877" placeholder="{...}" />
+            <marker date="1364042306927" expanded="true" signature="159:818" placeholder="{&quot;rolelist&quot;: null...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="955" column="0" selection-start="14383" selection-end="14383" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/viewmodels/accounts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="3" selection-start="1250" selection-end="1336" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/viewmodels/rolePermissions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="83" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/viewmodels/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="64" selection-start="1123" selection-end="1123" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="295" column="58" selection-start="12717" selection-end="12717" vertical-scroll-proportion="-2.4230769">
+          <folding>
+            <element signature="tag#script#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#script#2;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#script#4;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#script#5;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#script#6;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/models/rolePermissions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="1107" selection-end="1107" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/app/client/dataservice.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="19" selection-start="710" selection-end="710" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/app/client/api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="28" selection-start="3706" selection-end="3706" vertical-scroll-proportion="0.508046">
+        <state line="107" column="42" selection-start="4468" selection-end="4468" vertical-scroll-proportion="0.46896553">
           <folding />
         </state>
       </provider>
