@@ -4,7 +4,7 @@
     <title>Prototype</title>
     <link rel="stylesheet" type="text/css" href="../styles/style.css">
     <script src="../scripts/lib/jquery.js"></script>
-    <script data-main="../scripts/main" src="../scripts/lib/require.js"></script>
+    <script data-main="../scripts/main" src="../scripts/require.js"></script>
     <script type="text/javascript">
         $(function () {
             $(this).on('saveAccount', function (event) {
@@ -231,22 +231,22 @@
     </div>
     <div data-bind="foreach:rolePermissions">
         <div class="row-fluid">
-            <div class="accordion" data-bind="attr:{'id':'role_' + id()}">
+            <div class="accordion" data-bind="attr:{'id':'role_' + role.id()}">
                 <div class="accordion-group">
                     <div class="accordion-heading">
                         <div class="row-fluid">
                             <div class="span2">
-                                <span data-bind="text:id"></span>
+                                <span data-bind="text:role.id"></span>
                             </div>
                             <div class="span6">
-                                <span data-bind="text:name"></span>
+                                <span data-bind="text:role.name"></span>
                             </div>
                             <div class="span4">
                                 <div class="btn-group row-fluid">
                                     <div class="span6">
                                         <a class="accordion-toggle btn btn-primary command" data-toggle="collapse"
                                            data-command-target="commands" data-command-action="editRolePermission"
-                                           data-bind="attr:{'data-parent':'#role_' + id(),'href':'#role_body_' + id(),'data-id':id(),'data-placeholder':'roleedit_'+id()}"
+                                           data-bind="attr:{'data-parent':'#role_' + role.id(),'href':'#role_body_' + role.id(),'data-id':role.id(),'data-placeholder':'roleedit_'+role.id()}"
                                                 >
                                             Edit
                                         </a>
@@ -258,10 +258,10 @@
                             </div>
                         </div>
                     </div>
-                    <div data-bind="attr:{'id':'role_body_' + id()}"
+                    <div data-bind="attr:{'id':'role_body_' + role.id()}"
                          class="accordion-body collapse">
                         <div class="accordion-inner">
-                            <div data-bind="attr:{'id':'roleedit_'+id()}"></div>
+                            <div data-bind="attr:{'id':'roleedit_'+role.id()}"></div>
                         </div>
                     </div>
                 </div>
@@ -283,7 +283,7 @@
             </div>
 
             <div class="span1">
-                <input type="checkbox" data-bind="checked:system">
+                <input type="checkbox" data-bind="checked:role.system">
             </div>
         </div>
         <div class="row-fluid">
@@ -368,8 +368,8 @@
     </div>
     <div class="row-fluid">
         <a href="#new_role_body" class="btn btn-primary command" data-command-target="commands" data-parent="new_role_body"
-           data-command-action="saveRole"
-           data-bind="attr:{'data-toggle':errors().length==0?'collapse':null}">Save</a>
+           data-command-action="saveNewRole"
+           data-bind="attr:{'data-toggle':errors().length==0?'collapse':null,'data-command-id':id()}">Save</a>
         <a href="#new_role_body"
            data-parent="new_role_body"
            data-toggle="collapse" class="btn">Cancel</a>
